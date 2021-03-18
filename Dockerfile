@@ -1,3 +1,3 @@
-FROM scratch
-COPY hello /
-CMD ["/hello allbigdat"]
+FROM alpine:3.10
+
+ENTRYPOINT ["echo", "hello allbigdat"]
