@@ -1,0 +1,12 @@
+version: '1' 
+services: 
+  app: 
+    build: . 
+    image: ${DOCKER_USER_ID}/hello_allbigdat 
+  production: 
+    image: ${DOCKER_USER_ID}/flask:${BUILD_NUMBER} 
+    volumes: 
+      - .:/code 
+    command: echo "HELLO ALLBIGDAT ! DOCKER BUILD and PUBLISHING COMPLETE !"
+    ports: 
+      - "80:80"
