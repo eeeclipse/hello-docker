@@ -1,4 +1,6 @@
  node {
+     git poll: true, url:'https://github.com/eeeclipse/hello-docker.git'
+  
      stage('Clone repository') {
          checkout scm 
          #repository를 jenkins workspace로 clone
