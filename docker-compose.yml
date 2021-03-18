@@ -4,7 +4,7 @@ services:
     build: . 
     image: ${DOCKER_USER_ID}/hello_allbigdat 
   production: 
-    image: ${DOCKER_USER_ID}/flask:${BUILD_NUMBER} 
+    image: ${DOCKER_USER_ID}/hello_allbigdat:${BUILD_NUMBER} 
     volumes: 
       - .:/code 
     command: echo "HELLO ALLBIGDAT ! DOCKER BUILD and PUBLISHING COMPLETE !"
